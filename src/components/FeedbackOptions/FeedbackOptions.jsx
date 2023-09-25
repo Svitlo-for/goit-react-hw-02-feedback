@@ -1,7 +1,17 @@
-export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+import { Button } from 'components/App.styled';
+
+export const FeedbackOptions = ({ onLeaveFeedback }) => {
   return (
     <>
-      <button></button>
+      <Button onClick={onLeaveFeedback} name="good">
+        Good
+      </Button>
+      <Button onClick={onLeaveFeedback} name="neutral">
+        Neutral
+      </Button>
+      <Button onClick={onLeaveFeedback} name="bad">
+        Bad
+      </Button>
     </>
   );
 };
