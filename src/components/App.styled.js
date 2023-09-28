@@ -16,3 +16,10 @@ export const Button = styled.button`
     border: 2px solid tomato;
   }
 `;
+
+export const Wrapper = styled.div`
+  margin: 0 auto;
+  padding: 1em 1em;
+  background: rgba(0, 0, 0, 0.05);
+  width: 320px;
+`;
