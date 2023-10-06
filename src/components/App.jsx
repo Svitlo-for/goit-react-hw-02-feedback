@@ -11,10 +11,10 @@ export class App extends Component {
     neutral: 0,
     bad: 0,
   };
-  onLeaveFeedback = event => {
+  onLeaveFeedback = option => {
     this.setState(prevState => {
       return {
-        [event.target.name]: prevState[event.target.name] + 1,
+        [option]: prevState[option] + 1,
       };
     });
   };
@@ -33,7 +33,7 @@ export class App extends Component {
       <Wrapper>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={this.state}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
